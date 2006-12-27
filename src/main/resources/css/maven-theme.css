@@ -28,16 +28,18 @@ th {
  }
 
 div#banner {
- border-top: 1px solid #369;
- border-bottom: 1px solid #003;
+ border-bottom: 1px solid #fff;
  }
 
 #banner, #banner td { 
- background: #036;
+ background: #fff;
  color: #fff;
  }
 #banner {
   border-bottom: 1px solid #fff;
+}
+#banner img {
+ padding: 8px;
 }
 
 #leftColumn {
@@ -46,6 +48,7 @@ div#banner {
  border-right: 1px solid #aaa;
  border-bottom: 1px solid #aaa;
  border-top: 1px solid #fff;
+ width: 150px;
 }
 
 #navcolumn {
@@ -53,18 +56,30 @@ div#banner {
  border-right: none;
  border-bottom: none;
  border-top: none;
- }
+ padding-top: 5px;
+}
 
 #navcolumn h5 {
   font-size: inherit;
+  border-bottom: 1px solid #aaa;
+  padding-top: 3px;
+}
+
+#navcolumn li {
+  padding-left: 8px;
 }
 
 #breadcrumbs {
- background-color: #ddd;
+ background-color: #ccc;
  color: #000;
- border-top: 1px solid #fff;
+ border-top: 1px solid #aaa;
  border-bottom: 1px solid #aaa;
- }
+ height: 14px;
+}
+
+#breadcrumbs div {
+  padding: 1px 8px 2px 2px;
+}
 
 .source {
  background-color: #fff;
@@ -87,9 +102,13 @@ a[name]:hover, #leftColumn a[name]:hover {
  color: inherit !important;
  }
 
-a:link, #breadcrumbs a:visited, #navcolumn a:visited, .contentBox a:visited, .tasknav a:visited {
- color: blue;
- }
+#breadcrumbs a:link, #navcolumn a:link {
+ color: #36a;
+}
+
+#breadcrumbs a:visited, #navcolumn a:visited, .contentBox a:visited, .tasknav a:visited {
+ color: #47a;
+}
 
 a:active, a:hover, #leftColumn a:active, #leftColumn a:hover {
  color: #f30 !important;
@@ -521,6 +540,10 @@ small, div#footer, div#login, div.tabs th, div.tabs td, input, select, .paginate
   font-size: x-small;
 }
 
+#breadcrumbs div {
+  font-size: x-small;
+}
+
 .tabs td, .tabs th, dt, .tasknav .selfref, #login .username, .selection {
   font-weight: bold;
 }
@@ -541,6 +564,7 @@ li.selection ul {
 #bodyColumn h2 {
   margin-top: .3em;
   margin-bottom: .5em;
+  padding-left: .5em;
 }
 
 p, ul, ol, dl, .bars table {
@@ -554,9 +578,9 @@ form {
 
 #bodyColumn {
   margin-right: 0;
-  margin-top: 1em;
-  padding-right: 12px;
-  margin-left: 190px;
+  margin-top: 0.4em;
+  padding-right: 0px;
+  margin-left: 158px;
 }
 
 html>body #bodyColumn {
