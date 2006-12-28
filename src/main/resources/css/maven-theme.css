@@ -69,6 +69,10 @@ div#banner {
   padding-left: 8px;
 }
 
+#navcolumn li strong {
+  color: #369;
+}
+
 #breadcrumbs {
  background-color: #ccc;
  color: #000;
