@@ -35,11 +35,9 @@ div#banner {
  background: #fff;
  color: #fff;
  }
+
 #banner {
   border-bottom: 1px solid #fff;
-}
-#banner img {
- padding: 8px;
 }
 
 #leftColumn {
@@ -48,7 +46,6 @@ div#banner {
  border-right: 1px solid #aaa;
  border-bottom: 1px solid #aaa;
  border-top: 1px solid #fff;
- width: 150px;
 }
 
 #navcolumn {
@@ -56,17 +53,11 @@ div#banner {
  border-right: none;
  border-bottom: none;
  border-top: none;
- padding-top: 5px;
 }
 
 #navcolumn h5 {
   font-size: inherit;
   border-bottom: 1px solid #aaa;
-  padding-top: 3px;
-}
-
-#navcolumn li {
-  padding-left: 8px;
 }
 
 #navcolumn li strong {
@@ -519,7 +510,12 @@ li.selection ul a {
   background-color: #fff;
 }
 
-/* font and text properties, exclusive of link indication, alignment, text-indent */
+/*
+================================================================================
+font and text properties, exclusive of link indication, alignment, text-indent
+================================================================================
+*/
+
 body, th, td, input, select {
   font-family: Verdana, Helvetica, Arial, sans-serif;
 }
@@ -539,10 +535,6 @@ small, div#footer, div#login, div.tabs th, div.tabs td, input, select, .paginate
   font-size: x-small;
 }
 
-#breadcrumbs div {
-  font-size: x-small;
-}
-
 .tabs td, .tabs th, dt, .tasknav .selfref, #login .username, .selection {
   font-weight: bold;
 }
@@ -559,7 +551,33 @@ li.selection ul {
   font-size: 1.25em;
 }
 
-/* box properties (exclusive of borders), positioning, alignments, list types, text-indent */
+#breadcrumbs div {
+  font-size: x-small;
+}
+
+/*
+================================================================================
+box properties (exclusive of borders), positioning, alignments, list types,
+text-indent
+================================================================================
+*/
+
+#leftColumn {
+  width: 150px;
+}
+
+#navcolumn {
+  padding-top: 5px;
+}
+
+#navcolumn h5 {
+  padding-top: 3px;
+}
+
+#navcolumn li {
+  padding-left: 8px;
+}
+
 #bodyColumn h2 {
   margin-top: .3em;
   margin-bottom: .5em;
@@ -848,6 +866,10 @@ td.filebrowse h2 {
 
 #banner h1 {
   margin: 0;
+}
+
+#banner img {
+ padding: 8px;
 }
 
 .axial th, .axial th .strut, #leftColumn .strut {
