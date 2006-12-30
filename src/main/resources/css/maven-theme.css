@@ -78,11 +78,6 @@ div#banner {
  color: #000;
  border-top: 1px solid #aaa;
  border-bottom: 1px solid #aaa;
- height: 1.4em;
-}
-
-#breadcrumbs div {
-  padding: 1px 8px 2px 2px;
 }
 
 .source {
@@ -860,7 +855,7 @@ td.filebrowse h2 {
 }
 
 #breadcrumbs {
-  padding: 2px 8px;
+  padding: 3px 10px;
 }
 
 .legend {
