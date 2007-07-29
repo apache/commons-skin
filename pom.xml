@@ -27,8 +27,8 @@ under the License.
   <name>Commons Skin</name>
   <description>Commons Skin</description>
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/jakarta/commons/proper/commons-skin/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/jakarta/commons/proper/commons-skin/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewvc/jakarta/commons/proper/commons-skin/trunk/</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</developerConnection>
+    <url>http://svn.apache.org/viewvc/commons/proper/commons-skin/trunk/</url>
   </scm>
 </project>
