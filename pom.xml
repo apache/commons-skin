@@ -23,7 +23,7 @@ under the License.
     <version>5</version>
   </parent>
   <artifactId>commons-skin</artifactId>
-  <version>3-SNAPSHOT</version>
+  <version>2-SNAPSHOT</version>
   <name>Commons Skin</name>
   <description>Commons Skin</description>
   <scm>
