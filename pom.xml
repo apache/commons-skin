@@ -26,6 +26,7 @@ under the License.
   <version>2-SNAPSHOT</version>
   <name>Commons Skin</name>
   <description>Commons Skin</description>
+  <inceptionYear>2006</inceptionYear>
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</developerConnection>
