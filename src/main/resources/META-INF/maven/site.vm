@@ -544,7 +544,8 @@
       ## See DOXIA-150
       #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
       #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
-      $StringUtils.replace( $item.toString().trim(), $documentHeader, "" )
+      #set ( $foot = $StringUtils.replace( $item.toString().trim(), $documentHeader, "" ) )
+      $StringUtils.replace( $foot, '@project.name@', ${project.name} )
       #end
     #end
       <div class="xright">Copyright &#169;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
