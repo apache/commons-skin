@@ -471,15 +471,8 @@
       @import url("$relativePath/css/maven-base.css");
       @import url("$relativePath/css/maven-theme.css");
       @import url("$relativePath/css/site.css");
-      @import url("$relativePath/css/prettify.css");
     </style>
     <link rel="stylesheet" href="$relativePath/css/print.css" type="text/css" media="print" />
-    <script type="text/javascript" src="$relativePath/js/prettify.js"></script>
-    <script type="text/javascript">
-        window.onload=function() {
-            prettyPrint();
-        }
-    </script>
 #foreach( $author in $authors )
       <meta name="author" content="$author" />
 #end
