@@ -535,6 +535,7 @@
       <hr/>
     </div>
     <div id="footer">
+      <div class="center">Copyright &#169;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
     #if ( $decoration.custom.getChild("footer") )
       ## See DOXIA-150
       #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
@@ -543,7 +544,6 @@
       $StringUtils.replace( $foot, '@project.name@', ${project.name} )
       #end
     #end
-      <div class="xright">Copyright &#169;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
       <div class="clear">
         <hr/>
       </div>
