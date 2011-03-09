@@ -35,7 +35,7 @@ div.overlay{/* This is absolute relative to the wrapper container. Default to bo
 }
 
 div.overlay span{ /* settings for the &trade; content */
-    font-size:20px;
+    font-size:14px;
     color:black;
     margin:0px;
 }
