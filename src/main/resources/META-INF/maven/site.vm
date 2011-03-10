@@ -10,6 +10,8 @@
 ## - adds <custom><footer> content after Copyright, replacing @project.name@ with current ${project.name}
 ##   i.e. delays resolution of the Maven variable so it is processed in the current site context, not wherever
 ##   site.xml is located.
+## - add trademark overlay if the POM property banner[Left|Right]TradePos is defined - should be a style value.
+##Following is currently disabled:
 ## - add trademark overlay if <custom><bannerLeft|Right><tradePos> is defined, using the value as the style
 ## 
 ## Resolve relativePath in context of current project
@@ -90,9 +92,19 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
 #macro ( banner $banner $id )
   #if ( $banner )
     <div id="$id">
-    #if ( $decoration.custom.getChild($id).getChild("tradePos") )
-      #set ( $trade = $decoration.custom.getChild($id).getChild("tradePos").value )
+    #set ( $trade = $null )
+    ## Cannot use #evaluate in this version of velocity, so have to do it the hard way
+    ## Check for property overrides
+    #if ( $id eq "bannerLeft" )
+      #set ( $trade = $!bannerLeftTradePos )
     #end
+    #if ( $id eq "bannerRight" )
+      #set ( $trade = $!bannerRightTradePos )
+    #end
+## Disabled. site.xml custom section cannot be selectively overridden, so easier to use pom properties in component.
+##    #if ( $decoration.custom.getChild($id).getChild("tradePos") )
+##      #set ( $trade = $decoration.custom.getChild($id).getChild("tradePos").value )
+##    #end
     #if ( $trade )
       <div class="overlay_wrapper">
     #end
