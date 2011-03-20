@@ -25,7 +25,7 @@
     <version>18</version>
   </parent>
   <artifactId>commons-skin</artifactId>
-  <version>3-SNAPSHOT</version>
+  <version>4-SNAPSHOT</version>
   <name>Commons Skin</name>
   <description>Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
