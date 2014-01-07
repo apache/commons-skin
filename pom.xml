@@ -26,8 +26,8 @@
   </parent>
   <artifactId>commons-skin</artifactId>
   <version>4-SNAPSHOT</version>
-  <name>Commons Skin</name>
-  <description>Commons Skin</description>
+  <name>Apache Commons Skin</name>
+  <description>Apache Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</connection>
