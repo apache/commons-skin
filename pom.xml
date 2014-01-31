@@ -22,10 +22,10 @@
   <parent>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-parent</artifactId>
-    <version>27</version>
+    <version>32</version>
   </parent>
   <artifactId>commons-skin</artifactId>
-  <version>4-SNAPSHOT</version>
+  <version>4</version>
   <name>Apache Commons Skin</name>
   <description>Apache Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
@@ -34,10 +34,6 @@
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</developerConnection>
     <url>http://svn.apache.org/viewvc/commons/proper/commons-skin/trunk/</url>
   </scm>
-  <!-- Workaround for SUREFIRE-300 -->
-  <properties>
-    <maven.test.skip>true</maven.test.skip>
-  </properties>
   <build>
     <resources>
       <resource>
