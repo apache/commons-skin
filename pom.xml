@@ -34,10 +34,6 @@
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</developerConnection>
     <url>http://svn.apache.org/viewvc/commons/proper/commons-skin/trunk/</url>
   </scm>
-  <!-- Workaround for SUREFIRE-300 -->
-  <properties>
-    <maven.test.skip>true</maven.test.skip>
-  </properties>
   <build>
     <resources>
       <resource>
