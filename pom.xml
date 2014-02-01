@@ -34,11 +34,26 @@
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</developerConnection>
     <url>http://svn.apache.org/viewvc/commons/proper/commons-skin/trunk/</url>
   </scm>
+
   <build>
     <resources>
       <resource>
         <directory>${basedir}/src/main/resources</directory>
       </resource>
     </resources>
+
+    <plugins>
+      <!-- Configure assembly plugin so that mvn deploy works -->
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptors>
+            <descriptor>src/main/assembly/src.xml</descriptor>
+          </descriptors>
+          <tarLongFileMode>gnu</tarLongFileMode>
+        </configuration>
+      </plugin>
+    </plugins>
+
   </build>
 </project>
