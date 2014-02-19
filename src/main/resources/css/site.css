@@ -22,7 +22,6 @@ dt { margin: 15px 0 5px 0; font-size: 1.2em }
 .big-green { font-weight: bold; color: green }
 
 .layout-table { width: 100%; }
-.layout-table tr { vertical-align: top; }
 .sidebar { width: 250px; vertical-align: top; }
 .content { padding-left: 20px; vertical-align: top; }
 
