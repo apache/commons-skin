@@ -158,21 +158,21 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
 #end
 ##
 #macro ( links $links )
-	<ul class="nav">
-	#set ( $counter = 0 )
-	#foreach( $item in $links )
-		#set ( $counter = $counter + 1 )
-		#set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
-		#set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-		#set ( $activeClass = "" )
-		#if ( $alignedFileName == $currentItemHref)
-			#set ( $activeClass = ' class="active"' )
-		#end
-		<li$activeClass>
-		#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
-		</li>
-	#end
-	</ul>
+..<ul class="nav">
+..#set ( $counter = 0 )
+..#foreach( $item in $links )
+....#set ( $counter = $counter + 1 )
+....#set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+....#set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+....#set ( $activeClass = "" )
+....#if ( $alignedFileName == $currentItemHref)
+......#set ( $activeClass = ' class="active"' )
+....#end
+....<li$activeClass>
+....#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
+....</li>
+..#end
+..</ul>
 #end
 ##
 #macro ( breadcrumbs $breadcrumbs $cssClass )
@@ -211,82 +211,82 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
 #end
 ##
 #macro ( menuItem $item $isComponentDocumentation )
-	#set ( $collapse = "none" )
-	#set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
-	#set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+..#set ( $collapse = "none" )
+..#set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+..#set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
 ##
-	#if ( $item && $item.items && $item.items.size() > 0 )
-		#if ( $item.collapse == false )
-			#set ( $collapse = "expanded" )
-		#else
-			## By default collapsed
-			#set ( $collapse = "collapsed" )
-		#end
+..#if ( $item && $item.items && $item.items.size() > 0 )
+....#if ( $item.collapse == false )
+......#set ( $collapse = "expanded" )
+....#else
+......## By default collapsed
+......#set ( $collapse = "collapsed" )
+....#end
 ##
-		#set ( $display = false )
-		#displayTree( $display $item )
+....#set ( $display = false )
+....#displayTree( $display $item )
 ##
-		#if ( $alignedFileName == $currentItemHref || $display )
-			#set ( $collapse = "expanded" )
-		#end
-	#end
-	#set ( $active = "" )
-	#if ( $alignedFileName == $currentItemHref )
-	#set ($active = " active")
-	#end
-	#set ( $thisProjectDir = "../${project.artifactId}" )
-	#if ($thisProjectDir == $PathTool.getDirectoryComponent( $item.href ))
-	#set ($active = " active")
-	#end
-	#if (${project.artifactId} != "log4j" && $isComponentDocumentation && 
-				($item.href == "team-list.html" || $item.href == "mail-lists.html" 
-				|| $item.href == "issue-tracking.html" || $item.href == "license.html" 
-				|| $item.href == "source-repository.html"))
-	<!-- Removing overall project item $item.name from component-specific menu -->
-	#else
-		<li class="$collapse$active">
-		#link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
-		#if ( $item && $item.items && $item.items.size() > 0 )
-			#if ( $collapse == "expanded" )
-				<ul>
-					#foreach( $subitem in $item.items )
-						#menuItem( $subitem $isComponentDocumentation )
-					#end
-				</ul>
-			#end
-		#end
-		</li>
- 	#end
+....#if ( $alignedFileName == $currentItemHref || $display )
+......#set ( $collapse = "expanded" )
+....#end
+..#end
+..#set ( $active = "" )
+..#if ( $alignedFileName == $currentItemHref )
+..#set ($active = " active")
+..#end
+..#set ( $thisProjectDir = "../${project.artifactId}" )
+..#if ($thisProjectDir == $PathTool.getDirectoryComponent( $item.href ))
+..#set ($active = " active")
+..#end
+..#if (${project.artifactId} != "log4j" && $isComponentDocumentation &&
+........($item.href == "team-list.html" || $item.href == "mail-lists.html"
+........|| $item.href == "issue-tracking.html" || $item.href == "license.html"
+........|| $item.href == "source-repository.html"))
+..<!-- Removing overall project item $item.name from component-specific menu -->
+..#else
+....<li class="$collapse$active">
+....#link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
+....#if ( $item && $item.items && $item.items.size() > 0 )
+......#if ( $collapse == "expanded" )
+........<ul>
+..........#foreach( $subitem in $item.items )
+............#menuItem( $subitem $isComponentDocumentation )
+..........#end
+........</ul>
+......#end
+....#end
+....</li>
+ ..#end
 #end
 ##
 #macro ( mainMenu $menus )
-	#foreach( $menu in $menus )
-		<ul class="nav nav-list">
-		#set ($isComponentDocumentation = false)
- 		#if ( $menu.name )
-			#set ( $menuName = $menu.name )
+..#foreach( $menu in $menus )
+....<ul class="nav nav-list">
+....#set ($isComponentDocumentation = false)
+ ....#if ( $menu.name )
+......#set ( $menuName = $menu.name )
             #if ( $menuName == $title )
               #set ( $menu.img = "icon-home" )
-			#elseif ( $menuName == "Project Documentation" )
+......#elseif ( $menuName == "Project Documentation" )
               #set ( $menu.img = "icon-info-sign" )
-			#elseif ( $menuName == "Development" )
+......#elseif ( $menuName == "Development" )
               #set ( $menu.img = "icon-cog" )
-			#elseif ( $menuName == "User Guide" )
+......#elseif ( $menuName == "User Guide" )
               #set ( $menu.img = "icon-book" )
-			#end
-			#if ( $menu.img )
-			 <li class="nav-header"><i class="$menu.img"></i>$menuName</li>
-			#else
-			 <li class="nav-header">$menuName</li>
-			#end
-		#end
-		#if ( $menu.items && $menu.items.size() > 0 )
-			#foreach( $item in $menu.items )
-				#menuItem( $item $isComponentDocumentation )
-			#end
-		#end
-		</ul>
-	#end
+......#end
+......#if ( $menu.img )
+...... <li class="nav-header"><i class="$menu.img"></i>$menuName</li>
+......#else
+...... <li class="nav-header">$menuName</li>
+......#end
+....#end
+....#if ( $menu.items && $menu.items.size() > 0 )
+......#foreach( $item in $menu.items )
+........#menuItem( $item $isComponentDocumentation )
+......#end
+....#end
+....</ul>
+..#end
 #end
 ##
 #macro ( copyright )
@@ -497,14 +497,14 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
 #end
     <title>$title</title>
 
-	<link rel="stylesheet" href="$relativePath/css/bootstrap.min.css" type="text/css" />
-	<link rel="stylesheet" href="$relativePath/css/site.css" type="text/css" />
+..<link rel="stylesheet" href="$relativePath/css/bootstrap.min.css" type="text/css" />
+..<link rel="stylesheet" href="$relativePath/css/site.css" type="text/css" />
     <link rel="stylesheet" href="$relativePath/css/print.css" media="print" />
 
-	<script type="text/javascript" src="$relativePath/js/jquery.min.js"></script>
-	<script type="text/javascript" src="$relativePath/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="$relativePath/js/prettify.min.js"></script>
-	<script type="text/javascript" src="$relativePath/js/site.js"></script>
+..<script type="text/javascript" src="$relativePath/js/jquery.min.js"></script>
+..<script type="text/javascript" src="$relativePath/js/bootstrap.min.js"></script>
+..<script type="text/javascript" src="$relativePath/js/prettify.min.js"></script>
+..<script type="text/javascript" src="$relativePath/js/site.js"></script>
 
     #if ( $decoration.body.head )
       #foreach( $item in $decoration.body.head.getChildren() )
@@ -521,51 +521,51 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
     #if( $headContent )$headContent#end
   </head>
 
-	<body class="composite">
+..<body class="composite">
         #banner( $decoration.bannerLeft "bannerLeft" "logo-left" )
         #banner( $decoration.bannerRight "bannerRight" "logo-right" )
-		<div class="clear"></div>
+....<div class="clear"></div>
 
-		<div class="navbar">
-			<div class="navbar-inner">
-				<div class="container-fluid">
-					<a class="brand" href="$project.url">$project.name &trade;</a>
-					<ul class="nav">#publishDate( "navigation-top" $decoration.publishDate $decoration.version )</ul>
+....<div class="navbar">
+......<div class="navbar-inner">
+........<div class="container-fluid">
+..........<a class="brand" href="$project.url">$project.name &trade;</a>
+..........<ul class="nav">#publishDate( "navigation-top" $decoration.publishDate $decoration.version )</ul>
                     <div class="pull-right">#links( $decoration.body.links )</div>
-				</div>
-			</div>
-		</div>
+........</div>
+......</div>
+....</div>
 
-		<div class="container-fluid">
-			<table class="layout-table">
-				<tr>
-					<td class="sidebar">
-						<div class="well sidebar-nav">
-							#mainMenu( $decoration.body.menus )
-						</div>
-						<div id="poweredBy">
-							#builtByLogo( $decoration.poweredBy )
-						</div>
-					</td>
-					<td class="content">
-						$bodyContent
-					</td>
-				</tr>
-			</table>
-		</div>
+....<div class="container-fluid">
+......<table class="layout-table">
+........<tr>
+..........<td class="sidebar">
+............<div class="well sidebar-nav">
+..............#mainMenu( $decoration.body.menus )
+............</div>
+............<div id="poweredBy">
+..............#builtByLogo( $decoration.poweredBy )
+............</div>
+..........</td>
+..........<td class="content">
+............$bodyContent
+..........</td>
+........</tr>
+......</table>
+....</div>
 
-		<div class="footer">
-			<p>Copyright &copy;#copyright()All Rights Reserved.</p>
+....<div class="footer">
+......<p>Copyright &copy;#copyright()All Rights Reserved.</p>
             #if ( $decoration.custom.getChild("footer") )
               #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
                 #set ( $foot = $item.toString().trim() )
                 #removeheader ( $foot )
-				#set ( $foot = $StringUtils.replace( $foot, '@project.name@', ${project.name} ) )
+........#set ( $foot = $StringUtils.replace( $foot, '@project.name@', ${project.name} ) )
                 #removeDuplicateApacheName ( $foot )
-				$foot
+........$foot
               #end
             #end
-		</div>
-	</body>
+....</div>
+..</body>
 
 </html>
