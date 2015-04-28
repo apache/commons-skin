@@ -7,7 +7,7 @@ div.clear hr { display: none; }
 --------------------------------- */
 
 a.externalLink[href^="http"] {
-    background: none;
+    background-image: none;
 }
 
 #publishDate, #projectVersion, .divider {
