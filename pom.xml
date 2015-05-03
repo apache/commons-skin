@@ -25,15 +25,15 @@
     <version>37</version>
   </parent>
   <artifactId>commons-skin</artifactId>
-  <version>4.1-SNAPSHOT</version>
+  <version>4.1</version>
   <name>Apache Commons Skin</name>
   <description>Apache Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewvc/commons/proper/commons-skin/trunk/</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/commons/proper/commons-skin/tags/commons-skin-4.1/</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/commons-skin/tags/commons-skin-4.1/</developerConnection>
+    <url>http://svn.apache.org/viewvc/commons/proper/commons-skin/tags/commons-skin-4.1/</url>
   </scm>
 
   <properties>
