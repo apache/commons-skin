@@ -31,9 +31,9 @@
   <inceptionYear>2006</inceptionYear>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/commons-skin/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewvc/commons/proper/commons-skin/trunk/</url>
+    <connection>scm:git:https://gitbox.apache.org/repos/asf/commons-skin</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/commons-skin</developerConnection>
+    <url>https://gitbox.apache.org/repos/asf/commons-skin</url>
   </scm>
 
   <properties>
