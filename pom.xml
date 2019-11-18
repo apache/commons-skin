@@ -58,6 +58,17 @@
           <tarLongFileMode>gnu</tarLongFileMode>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.rat</groupId>
+        <artifactId>apache-rat-plugin</artifactId>
+        <configuration>
+          <excludes combine.children="append">
+            <!-- https://jquery.org/license/ specifies this falls under the same licence as
+                 the containing project. -->
+            <exclude>src/main/resources/js/jquery.min.js</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
     </plugins>
 
   </build>
