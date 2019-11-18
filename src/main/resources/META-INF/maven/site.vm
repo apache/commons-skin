@@ -507,15 +507,15 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
     <script type="text/javascript" src="$relativePath/js/site.js"></script>
 
     #if ( $decoration.body.head )
-      #foreach( $item in $decoration.body.head.getChildren() )
-        #set ( $head = $item.toString().trim() )
-        #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
-        #if ( $item.name == "script" )
-          #relreplace( $StringUtils.replace( $item.toUnescapedString(), $documentHeader, "" ) )
-        #else
-          #relreplace( $StringUtils.replace( $item.toString(), $documentHeader, "" ) )
-        #end
-      #end
+      ## Note:
+      ## This is the content of the <head> tag in the site.xml.
+      ## It can be used to contain any injected XHTML escaped by CDATA.
+      ## The render.eval() method allows the content to be evaluated in VTL
+      ## (Velocity Template Language). This means anything can be put into 
+      ## the <head> section if desired.
+      ## Relative links can be rendered in scripts or links using
+      ## $relativePath (as above).
+      $render.eval( $decoration.body.head )
     #end
 
     #if( $headContent )$headContent#end
