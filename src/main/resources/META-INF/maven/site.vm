@@ -7,7 +7,7 @@
 ##
 ## Special processing:
 ## - allows relative URLs to be processed by the template by removing http://dummy.invalid/ from the start of any URL
-## - resolves $relativePath in banner and head elements
+## - resolves $relativePath in banner elements
 ## - allows absolute URLs in banner elements by removing '.remove.invalid' from hrefs
 ## - adds <custom><footer> content after Copyright, replacing @project.name@ with current ${project.name}
 ##   i.e. delays resolution of the Maven variable so it is processed in the current site context, not wherever
@@ -21,19 +21,10 @@
 #set ( $dummylen = $dummy.length() )
 #macro ( relreplace $text )
 ## Workround to allow site.xml to use $relativePath in URLs
-#if ( $text.startsWith($dummy) )#set ( $text = $text.substring($dummylen) )#end
-$StringUtils.replace( $text, '$relativePath', $relativePath )##
-#end
-##
-## Remove extraneous header from custom entries
-## See DOXIA-150
-#set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
-#macro ( removeheader $text )
-#set ( $text = $StringUtils.replace( $text, $documentHeader, '' ) )
-#end
-##
-#macro ( removeDuplicateApacheName $text )
-#set ( $text = $StringUtils.replace( $text, 'Apache Apache', 'Apache' ) )
+  #if ( $text.startsWith($dummy) )
+    #set ( $text = $text.substring($dummylen) )
+  #end
+  $StringUtils.replace( $text, '$relativePath', $relativePath )
 #end
 ##
 #macro ( link $href $name $target $img $position $alt $border $width $height )
@@ -570,11 +561,14 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
     <div class="footer">
       <p>Copyright &copy;#copyright()All Rights Reserved.</p>
       #if ( $decoration.custom.getChild("footer") )
+        ## Remove extraneous header from custom entries
+        ## See DOXIA-150
+        #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
         #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
           #set ( $foot = $item.toString().trim() )
-          #removeheader ( $foot )
+          #set ( $foot = $StringUtils.replace( $foot, $documentHeader, '' ) )
           #set ( $foot = $StringUtils.replace( $foot, '@project.name@', ${project.name} ) )
-          #removeDuplicateApacheName ( $foot )
+          #set ( $foot = $StringUtils.replace( $foot, 'Apache Apache', 'Apache' ) )
           $foot
         #end
       #end
