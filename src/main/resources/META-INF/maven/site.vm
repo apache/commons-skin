@@ -65,8 +65,8 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
 #macro ( image $img $alt $border $width $height )
   #if( $img )
     #if ( ! ( $img.toLowerCase().startsWith("http:/") || $img.toLowerCase().startsWith("https:/") ||
-            $img.toLowerCase().startsWith("ftp:/") || $img.toLowerCase().startsWith("mailto:") ||
-            $img.toLowerCase().startsWith("file:/") || ($img.toLowerCase().indexOf("://") != -1) ) )
+              $img.toLowerCase().startsWith("ftp:/") || $img.toLowerCase().startsWith("mailto:") ||
+              $img.toLowerCase().startsWith("file:/") || ($img.toLowerCase().indexOf("://") != -1) ) )
       #set ( $imgSrc = $PathTool.calculateLink( $img, $relativePath ) )
       #set ( $imgSrc = $imgSrc.replaceAll( '\\', '/' ) )
       #set ( $imgSrc = ' src="' + $imgSrc + '"' )
@@ -101,8 +101,8 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
     #if( $banner.href )
       #set ( $hrf = $banner.href.replace('.remove.invalid' ,'') )
       #if ( ! ( $hrf.toLowerCase().startsWith("http:/") || $hrf.toLowerCase().startsWith("https:/") ||
-        $hrf.toLowerCase().startsWith("ftp:/") || $hrf.toLowerCase().startsWith("mailto:") ||
-        $hrf.toLowerCase().startsWith("file:/") || ($hrf.toLowerCase().indexOf("://") != -1) ) )
+                $hrf.toLowerCase().startsWith("ftp:/") || $hrf.toLowerCase().startsWith("mailto:") ||
+                $hrf.toLowerCase().startsWith("file:/") || ($hrf.toLowerCase().indexOf("://") != -1) ) )
         #set ( $hrf = $PathTool.calculateLink( $hrf, $relativePath ) )
         #set ( $hrf = $hrf.replaceAll( '\\', '/' ) )
         #if ( ( $hrf == '' ) )
@@ -115,44 +115,44 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
     #end
 ##
     #if( $banner.src )
-        #set ( $src = $banner.src )
-        #if ( ! ( $src.toLowerCase().startsWith("http:/") || $src.toLowerCase().startsWith("https:/") ||
+      #set ( $src = $banner.src )
+      #if ( ! ( $src.toLowerCase().startsWith("http:/") || $src.toLowerCase().startsWith("https:/") ||
                 $src.toLowerCase().startsWith("ftp:/") || $src.toLowerCase().startsWith("mailto:") ||
                 $src.toLowerCase().startsWith("file:/") || ($src.toLowerCase().indexOf("://") != -1) ) )
-            #set ( $src = $PathTool.calculateLink( $src, $relativePath ) )
-            #set ( $src = $src.replaceAll( '\\', '/' ) )
-        #end
-        #if ( $banner.alt )
-            #set ( $alt = ' alt="' + $banner.alt + '"' )
-        #elseif ( $banner.name )
-            #set ( $alt = ' alt="' + $banner.name + '"' )
-        #else
-            #set ( $alt = "" )
-        #end
-        #if( $banner.border )
-          #set ( $imgBorder = ' border="' + $banner.border + '"' )
-        #else
-          #set ( $imgBorder = "" )
-        #end
-        #if( $banner.width )
-            #set ( $imgWidth = ' width="' + $banner.width + '"' )
-        #else
-            #set ( $imgWidth = "" )
-        #end
-        #if( $banner.height )
-           #set ( $imgHeight = ' height="' + $banner.height + '"' )
-        #else
-           #set ( $imgHeight = "" )
-        #end
-        <img class="$class" src="#relreplace($src)" $alt$imgBorder$imgWidth$imgHeight/>
+        #set ( $src = $PathTool.calculateLink( $src, $relativePath ) )
+        #set ( $src = $src.replaceAll( '\\', '/' ) )
+      #end
+      #if ( $banner.alt )
+        #set ( $alt = ' alt="' + $banner.alt + '"' )
+      #elseif ( $banner.name )
+        #set ( $alt = ' alt="' + $banner.name + '"' )
+      #else
+        #set ( $alt = "" )
+      #end
+      #if( $banner.border )
+        #set ( $imgBorder = ' border="' + $banner.border + '"' )
+      #else
+        #set ( $imgBorder = "" )
+      #end
+      #if( $banner.width )
+        #set ( $imgWidth = ' width="' + $banner.width + '"' )
+      #else
+        #set ( $imgWidth = "" )
+      #end
+      #if( $banner.height )
+        #set ( $imgHeight = ' height="' + $banner.height + '"' )
+      #else
+        #set ( $imgHeight = "" )
+      #end
+      <img class="$class" src="#relreplace($src)" $alt$imgBorder$imgWidth$imgHeight/>
     #else
-        <h2>$banner.name</h2>
+      <h2>$banner.name</h2>
     #end
 ##
     #if( $banner.href )
-        </a>
+      </a>
     #else
-        </div>
+      </div>
     #end
   #end
 #end
@@ -242,16 +242,16 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
         ($item.href == "team-list.html" || $item.href == "mail-lists.html"
         || $item.href == "issue-tracking.html" || $item.href == "license.html"
         || $item.href == "source-repository.html"))
-  <!-- Removing overall project item $item.name from component-specific menu -->
+    <!-- Removing overall project item $item.name from component-specific menu -->
   #else
     <li class="$collapse$active">
     #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
     #if ( $item && $item.items && $item.items.size() > 0 )
       #if ( $collapse == "expanded" )
         <ul>
-          #foreach( $subitem in $item.items )
-            #menuItem( $subitem $isComponentDocumentation )
-          #end
+        #foreach( $subitem in $item.items )
+          #menuItem( $subitem $isComponentDocumentation )
+        #end
         </ul>
       #end
     #end
@@ -265,19 +265,19 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
     #set ($isComponentDocumentation = false)
      #if ( $menu.name )
       #set ( $menuName = $menu.name )
-            #if ( $menuName == $title )
-              #set ( $menu.img = "icon-home" )
+      #if ( $menuName == $title )
+        #set ( $menu.img = "icon-home" )
       #elseif ( $menuName == "Project Documentation" )
-              #set ( $menu.img = "icon-info-sign" )
+        #set ( $menu.img = "icon-info-sign" )
       #elseif ( $menuName == "Development" )
-              #set ( $menu.img = "icon-cog" )
+        #set ( $menu.img = "icon-cog" )
       #elseif ( $menuName == "User Guide" )
-              #set ( $menu.img = "icon-book" )
+        #set ( $menu.img = "icon-book" )
       #end
       #if ( $menu.img )
-       <li class="nav-header"><i class="$menu.img"></i>$menuName</li>
+      <li class="nav-header"><i class="$menu.img"></i>$menuName</li>
       #else
-       <li class="nav-header">$menuName</li>
+      <li class="nav-header">$menuName</li>
       #end
     #end
     #if ( $menu.items && $menu.items.size() > 0 )
@@ -307,7 +307,7 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
 ##
     #if ( ${project.organization} )
       #if ( ${project.organization.name} && ${project.organization.url} )
-          <a href="$project.organization.url">${project.organization.name}</a>.
+        <a href="$project.organization.url">${project.organization.name}</a>.
       #elseif ( ${project.organization.name} )
         ${project.organization.name}.
       #end
@@ -359,16 +359,16 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
   #end
 ##
   #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
-      <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li> $prefix
-      <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+    <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li> $prefix
+    <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
   #elseif ( ( $datePosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $datePosition.equalsIgnoreCase( "navigation-top" ) ) )
     <div id="lastPublished">
       <span id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</span>
       <span class="divider">|</span> <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
     </div>
   #elseif ( $datePosition.equalsIgnoreCase("left") )
-      <li id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li>
-      <li class="divider">|</li> <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+    <li id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li>
+    <li class="divider">|</li> <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
   #end
 #end
 ##
@@ -396,8 +396,8 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
       #end
 ##
       #if ( ! ( $img.toLowerCase().startsWith("http:/") || $img.toLowerCase().startsWith("https:/") ||
-            $img.toLowerCase().startsWith("ftp:/") || $img.toLowerCase().startsWith("mailto:") ||
-            $img.toLowerCase().startsWith("file:/") || ($img.toLowerCase().indexOf("://") != -1) ) )
+                $img.toLowerCase().startsWith("ftp:/") || $img.toLowerCase().startsWith("mailto:") ||
+                $img.toLowerCase().startsWith("file:/") || ($img.toLowerCase().indexOf("://") != -1) ) )
         #set ( $img = $PathTool.calculateLink( $img, $relativePath ) )
         #set ( $img = $img.replaceAll( '\\', '/' ) )
       #end
@@ -442,8 +442,8 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
 #end
 ##
 #macro ( forkMeOnGitHub )
-  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' )
-            && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'projectId' ) )
+  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ) &&
+        $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'projectId' ) )
 
     #set ( $gitHubProjectId = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'projectId' ).getValue() )
 
@@ -461,12 +461,12 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
     #set ( $ribbonColor = 'red' )
     #set ( $definedRibbonColor = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'ribbonColor' ) )
 
-    #if ( $definedRibbonColor
-            && ( $definedRibbonColor.getValue().equalsIgnoreCase( "red" )
-            || $definedRibbonColor.getValue().equalsIgnoreCase( "green" )
-            || $definedRibbonColor.getValue().equalsIgnoreCase( "black" )
-            || $definedRibbonColor.getValue().equalsIgnoreCase( "orange" )
-            || $definedRibbonColor.getValue().equalsIgnoreCase( "gray" ) ) )
+    #if ( $definedRibbonColor &&
+            ( $definedRibbonColor.getValue().equalsIgnoreCase( "red" ) ||
+              $definedRibbonColor.getValue().equalsIgnoreCase( "green" ) ||
+              $definedRibbonColor.getValue().equalsIgnoreCase( "black" ) ||
+              $definedRibbonColor.getValue().equalsIgnoreCase( "orange" ) ||
+              $definedRibbonColor.getValue().equalsIgnoreCase( "gray" ) ) )
       #set ( $ribbonColor = $definedRibbonColor.getValue().toLowerCase() )
     #end
 
@@ -482,29 +482,29 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
   <head>
     <meta charset="${outputEncoding}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-## put meta together
-#foreach( $author in $authors )
+    ## put meta together
+    #foreach( $author in $authors )
     <meta name="author" content="$author" />
-#end
-#if ( $dateCreation )
+    #end
+    #if ( $dateCreation )
     <meta name="Date-Creation-yyyymmdd" content="$dateCreation" />
-#end
-#if ( $dateRevision )
+    #end
+    #if ( $dateRevision )
     <meta name="Date-Revision-yyyymmdd" content="$dateRevision" />
-#end
-#if ( $locale )
+    #end
+    #if ( $locale )
     <meta http-equiv="Content-Language" content="$locale.language" />
-#end
+    #end
     <title>$title</title>
 
-  <link rel="stylesheet" href="$relativePath/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="$relativePath/css/site.css" type="text/css" />
+    <link rel="stylesheet" href="$relativePath/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="$relativePath/css/site.css" type="text/css" />
     <link rel="stylesheet" href="$relativePath/css/print.css" media="print" />
 
-  <script type="text/javascript" src="$relativePath/js/jquery.min.js"></script>
-  <script type="text/javascript" src="$relativePath/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="$relativePath/js/prettify.min.js"></script>
-  <script type="text/javascript" src="$relativePath/js/site.js"></script>
+    <script type="text/javascript" src="$relativePath/js/jquery.min.js"></script>
+    <script type="text/javascript" src="$relativePath/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="$relativePath/js/prettify.min.js"></script>
+    <script type="text/javascript" src="$relativePath/js/site.js"></script>
 
     #if ( $decoration.body.head )
       #foreach( $item in $decoration.body.head.getChildren() )
@@ -522,8 +522,8 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
   </head>
 
   <body class="composite">
-        #banner( $decoration.bannerLeft "bannerLeft" "logo-left" )
-        #banner( $decoration.bannerRight "bannerRight" "logo-right" )
+    #banner( $decoration.bannerLeft "bannerLeft" "logo-left" )
+    #banner( $decoration.bannerRight "bannerRight" "logo-right" )
     <div class="clear"></div>
 
     <div class="navbar">
@@ -531,7 +531,7 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
         <div class="container-fluid">
           <a class="brand" href="$project.url">$project.name &trade;</a>
           <ul class="nav">#publishDate( "navigation-top" $decoration.publishDate $decoration.version )</ul>
-                    <div class="pull-right">#links( $decoration.body.links )</div>
+          <div class="pull-right">#links( $decoration.body.links )</div>
         </div>
       </div>
     </div>
@@ -556,15 +556,15 @@ $StringUtils.replace( $text, '$relativePath', $relativePath )##
 
     <div class="footer">
       <p>Copyright &copy;#copyright()All Rights Reserved.</p>
-            #if ( $decoration.custom.getChild("footer") )
-              #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
-                #set ( $foot = $item.toString().trim() )
-                #removeheader ( $foot )
-        #set ( $foot = $StringUtils.replace( $foot, '@project.name@', ${project.name} ) )
-                #removeDuplicateApacheName ( $foot )
-        $foot
-              #end
-            #end
+      #if ( $decoration.custom.getChild("footer") )
+        #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
+          #set ( $foot = $item.toString().trim() )
+          #removeheader ( $foot )
+          #set ( $foot = $StringUtils.replace( $foot, '@project.name@', ${project.name} ) )
+          #removeDuplicateApacheName ( $foot )
+          $foot
+        #end
+      #end
     </div>
   </body>
 
