@@ -20,7 +20,6 @@
 
 The ${developmentTeam} is pleased to announce the release of ${project.name} ${version}.
 
-
 ## N.B. the available variables are described here:
 ## http://maven.apache.org/plugins/maven-changes-plugin/examples/using-a-custom-announcement-template.html
 ##
@@ -130,3 +129,27 @@ o#if($!issue != "") $issue: #else$indent#end ${action} #if($!dueto != "")Thanks 
 #end
 ## End of main loop
 #end
+
+
+You can test ${project.name} by installing the skin using 'mvn install' 
+and adding the following to your site.xml site descriptor for the maven-site-plugin:
+
+  <skin>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>${project.artifactId}</artifactId>
+    <version>${version}</version>
+  </skin>
+
+  <custom>
+    <!-- Custom properties controlling the commons-skin template. -->
+    <commonsSkin>
+      <!-- 
+        Convert preformatted source section tags to prettyprint:
+          <div class="source"><pre> to <div class="source"><pre class="prettyprint">
+      -->
+      <prettyPrintSourcePreTags>true</prettyPrintSourcePreTags>
+
+      <!-- Add the "linenums" class to the prettyprint enabled source tags -->
+      <sourceLineNumbersEnabled>false</sourceLineNumbersEnabled>
+    </commonsSkin>
+  </custom>
