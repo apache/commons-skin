@@ -562,7 +562,7 @@
             ## The regex targets a plain <pre> tag rendered by the site plugin as:
             ## <div class="source"><pre>
             #if ( 'true' == $decoration.getCustomValue( 'commonsSkin.prettyPrintSourcePreTags' ) )
-              #if ( 'true' == $decoration.getCustomValue( 'commonsSkin.sourceLineNumbersEnabled' ) )
+              #if ( 'true' == $decoration.getCustomValue( 'commonsSkin.prettyPrintLineNumbersEnabled' ) )
                 #set ( $sourceStyle = "prettyprint linenums" )
               #else
                 #set ( $sourceStyle = "prettyprint" )
