@@ -519,12 +519,13 @@
       ## Note:
       ## This is the content of the <head> tag in the site.xml.
       ## It can be used to contain any injected XHTML escaped by CDATA.
-      ## The render.eval() method allows the content to be evaluated in VTL
-      ## (Velocity Template Language). This means anything can be put into 
+      ## The #evaluate() directive allows the content to be evaluated in VTL
+      ## (Velocity Template Language). This means anything can be put into
       ## the <head> section if desired.
       ## Relative links can be rendered in scripts or links using
       ## $relativePath (as above).
-      $render.eval( $decoration.body.head )
+      ## https://velocity.apache.org/engine/1.7/user-guide.html#evaluate
+      #evaluate( $decoration.body.head )
     #end
 
     #if( $headContent )$headContent#end
