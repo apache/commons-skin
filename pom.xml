@@ -42,6 +42,7 @@
     <commons.componentid>skin</commons.componentid>
     <commons.release.isDistModule>true</commons.release.isDistModule>
     <commons.bc.version>4.1</commons.bc.version>
+    <commons.rc.version>RC1</commons.rc.version>
     <!-- No svn staging -->
     <commons.distSvnStagingUrl></commons.distSvnStagingUrl>
     <commons.releaseManagerName>Alex Herbert</commons.releaseManagerName>
