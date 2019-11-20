@@ -25,7 +25,7 @@
     <version>49</version>
   </parent>
   <artifactId>commons-skin</artifactId>
-  <version>4.2-SNAPSHOT</version>
+  <version>4.2</version>
   <name>Apache Commons Skin</name>
   <description>Apache Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
