@@ -1,0 +1,48 @@
+              Apache Commons Skin 4.2
+                  RELEASE NOTES
+
+The Apache Commons Skin team is pleased to announce the release of Apache Commons Skin 4.2.
+
+New features and bug fixes for maven-site-plugin 3.5+.
+The previous version velocity template had features written for an earlier site
+plugin version that were broken with the latest site plugin.
+
+Changes in this version include:
+
+New features:
+o   Optionally render bare <div class="source"><pre> tags using prettyprint.
+    The functionality is enabled using custom properties to be added to the site.xml. 
+
+Fixed Bugs:
+o   Fix processing of custom <footer> element from commons-parent site.xml. 
+o   Update processing of <head> section to handle injected XHTML. 
+o   Fixed background on navigation menu collapsed icon from white to transparent. 
+
+
+Removed:
+o   Remove unused css files. These are not used in the current skin and
+    are from previous skin versions. 
+
+
+You can test Apache Commons Skin by installing the skin using 'mvn install' 
+and adding the following to your site.xml site descriptor for the maven-site-plugin:
+
+  <skin>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-skin</artifactId>
+    <version>4.2</version>
+  </skin>
+
+  <custom>
+    <!-- Custom properties controlling the commons-skin template. -->
+    <commonsSkin>
+      <!-- 
+        Convert preformatted source section tags to prettyprint:
+          <div class="source"><pre> to <div class="source"><pre class="prettyprint">
+      -->
+      <prettyPrintSourcePreTags>true</prettyPrintSourcePreTags>
+
+      <!-- Add the "linenums" class to the prettyprint enabled source tags -->
+      <prettyPrintLineNumbersEnabled>false</prettyPrintLineNumbersEnabled>
+    </commonsSkin>
+  </custom>
