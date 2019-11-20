@@ -150,6 +150,6 @@ and adding the following to your site.xml site descriptor for the maven-site-plu
       <prettyPrintSourcePreTags>true</prettyPrintSourcePreTags>
 
       <!-- Add the "linenums" class to the prettyprint enabled source tags -->
-      <sourceLineNumbersEnabled>false</sourceLineNumbersEnabled>
+      <prettyPrintLineNumbersEnabled>false</prettyPrintLineNumbersEnabled>
     </commonsSkin>
   </custom>
