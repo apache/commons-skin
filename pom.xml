@@ -25,7 +25,7 @@
     <version>49</version>
   </parent>
   <artifactId>commons-skin</artifactId>
-  <version>4.2-SNAPSHOT</version>
+  <version>4.3-SNAPSHOT</version>
   <name>Apache Commons Skin</name>
   <description>Apache Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
@@ -41,7 +41,7 @@
     <!-- To use the commons-release plugin -->
     <commons.componentid>skin</commons.componentid>
     <commons.release.isDistModule>true</commons.release.isDistModule>
-    <commons.bc.version>4.1</commons.bc.version>
+    <commons.bc.version>4.2</commons.bc.version>
     <commons.rc.version>RC1</commons.rc.version>
     <!-- No svn staging -->
     <commons.distSvnStagingUrl></commons.distSvnStagingUrl>

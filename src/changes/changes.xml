@@ -60,7 +60,10 @@ The <action> type attribute can be add,update,fix,remove.
      -->
 
     <body>
-      <release version="4.2" date="MM-DD-YYYY" description="New features and bug fixes for maven-site-plugin 3.5+. 
+      <release version="4.3" date="TBD" description="New features and bug fixes.">
+      </release>
+
+      <release version="4.2" date="2019-11-25" description="New features and bug fixes for maven-site-plugin 3.5+. 
 The previous version velocity template had features written for an earlier site 
 plugin version that were broken with the latest site plugin.">
         <action type="remove" dev="aherbert">
