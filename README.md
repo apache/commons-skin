@@ -43,11 +43,8 @@
 Apache Commons Skin
 ===================
 
-[![Travis-CI Status](https://travis-ci.org/apache/commons-skin.svg)](https://travis-ci.org/apache/commons-skin)
 [![GitHub Actions Status](https://github.com/apache/commons-skin/workflows/Java%20CI/badge.svg)](https://github.com/apache/commons-skin/actions)
-[![Coverage Status](https://coveralls.io/repos/apache/commons-skin/badge.svg)](https://coveralls.io/r/apache/commons-skin)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.commons/commons-skin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.apache.commons/commons-skin/)
-[![Javadocs](https://javadoc.io/badge/org.apache.commons/commons-skin/4.3-SNAPSHOT.svg)](https://javadoc.io/doc/org.apache.commons/commons-skin/4.3-SNAPSHOT)
 
 Apache Commons Skin
 
