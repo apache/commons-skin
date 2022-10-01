@@ -63,6 +63,7 @@ The <action> type attribute can be add,update,fix,remove.
       <release version="4.3" date="TBD" description="New features and bug fixes.">
         <!-- UPDATE -->
         <action type="update" dev="ggregory" due-to="Gary Gregory">Bump actions/checkout from 3 to 3.0.2.</action>
+        <action type="update" dev="ggregory" due-to="Gary Gregory">Bump actions/setup-java from 3 to 3.5.1.</action>
         <action type="update" dev="ggregory" due-to="Dependabot">Bump github/codeql-action from 2.1.23 to 2.1.25 #4.</action>
         <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump commons-parent from 49 to 54, #5.</action>
       </release>
