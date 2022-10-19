@@ -14,4 +14,4 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-The Apache code of conduct page is [https://www.apache.org/foundation/policies/conduct.html](https://www.apache.org/foundation/policies/conduct.html).
+The Apache Commons security page is [https://commons.apache.org/security.html](https://commons.apache.org/security.html).
