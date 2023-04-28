@@ -68,7 +68,7 @@ The <action> type attribute can be add,update,fix,remove.
         <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump actions/upload-artifact from 3.1.0 to 3.1.1 #18.</action>
         <action type="update" dev="ggregory" due-to="Dependabot">Bump github/codeql-action from 2.1.23 to 2.1.31 #4, #17, #19.</action>
         <action type="update" dev="ggregory" due-to="Dependabot">Bump ossf/scorecard-action from 1.1.2 to 2.0.6 #15.</action>
-        <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump commons-parent from 49 to 56, #5, #28, #32.</action>
+        <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump commons-parent from 49 to 57, #5, #28, #32, #59.</action>
       </release>
 
       <release version="4.2" date="2019-11-25" description="New features and bug fixes for maven-site-plugin 3.5+. 
