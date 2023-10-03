@@ -45,8 +45,6 @@
     <commons.rc.version>RC1</commons.rc.version>
     <!-- No svn staging -->
     <commons.distSvnStagingUrl></commons.distSvnStagingUrl>
-    <commons.releaseManagerName>Alex Herbert</commons.releaseManagerName>
-    <commons.releaseManagerKey>BC87A3FD0A54480F0BADBEBD21939FF0CA2A6567</commons.releaseManagerKey>
   </properties>
 
   <build>
