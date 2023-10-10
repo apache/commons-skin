@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-parent</artifactId>
-    <version>58</version>
+    <version>64</version>
   </parent>
   <artifactId>commons-skin</artifactId>
   <version>4.3-SNAPSHOT</version>
@@ -45,6 +45,7 @@
     <commons.rc.version>RC1</commons.rc.version>
     <!-- No svn staging -->
     <commons.distSvnStagingUrl></commons.distSvnStagingUrl>
+    <moditect.skip>true</moditect.skip>
   </properties>
 
   <build>
