@@ -43,7 +43,7 @@
 Apache Commons Skin
 ===================
 
-[![GitHub Actions Status](https://github.com/apache/commons-skin/workflows/Java%20CI/badge.svg)](https://github.com/apache/commons-skin/actions)
+[![Java CI](https://github.com/apache/commons-skin/actions/workflows/maven.yml/badge.svg)](https://github.com/apache/commons-skin/actions/workflows/maven.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.commons/commons-skin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.apache.commons/commons-skin/)
 
 Apache Commons Skin
