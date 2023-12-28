@@ -1,3 +1,30 @@
+              Apache Commons Skin 4.3
+                  RELEASE NOTES
+
+The Apache Commons Skin team is pleased to announce the commons-skin-4.3 release!
+
+Apache Commons Skin
+
+Changes in this version include:
+
+
+Fixed Bugs:
+o [StepSecurity] ci: Harden GitHub Actions #66. Thanks to step-security-bot, Gary Gregory. 
+
+Changes:
+o Main logo upgrade - commons-logo.png Thanks to Rob Tompkins. 
+o Bump actions/cache from 3.0.8 to 3.0.11 #12. Thanks to Dependabot. 
+o Bump actions/checkout from 3 to 3.1.0, #9. Thanks to Gary Gregory, Dependabot. 
+o Bump actions/setup-java from 3 to 3.6.0, #13. Thanks to Gary Gregory, Dependabot. 
+o Bump actions/upload-artifact from 3.1.0 to 3.1.1 #18. Thanks to Gary Gregory, Dependabot. 
+o Bump github/codeql-action from 2.1.23 to 2.1.31 #4, #17, #19. Thanks to Dependabot. 
+o Bump ossf/scorecard-action from 1.1.2 to 2.0.6 #15. Thanks to Dependabot. 
+o Bump commons-parent from 49 to 65, #5, #28, #32, #59, #95. Thanks to Gary Gregory, Dependabot. 
+
+
+Have fun!
+-Apache Commons Skin team
+
               Apache Commons Skin 4.2
                   RELEASE NOTES
 
@@ -11,20 +38,20 @@ Changes in this version include:
 
 New features:
 o   Optionally render bare <div class="source"><pre> tags using prettyprint.
-    The functionality is enabled using custom properties to be added to the site.xml. 
+    The functionality is enabled using custom properties to be added to the site.xml.
 
 Fixed Bugs:
-o   Fix processing of custom <footer> element from commons-parent site.xml. 
-o   Update processing of <head> section to handle injected XHTML. 
-o   Fixed background on navigation menu collapsed icon from white to transparent. 
+o   Fix processing of custom <footer> element from commons-parent site.xml.
+o   Update processing of <head> section to handle injected XHTML.
+o   Fixed background on navigation menu collapsed icon from white to transparent.
 
 
 Removed:
 o   Remove unused css files. These are not used in the current skin and
-    are from previous skin versions. 
+    are from previous skin versions.
 
 
-You can test Apache Commons Skin by installing the skin using 'mvn install' 
+You can test Apache Commons Skin by installing the skin using 'mvn install'
 and adding the following to your site.xml site descriptor for the maven-site-plugin:
 
   <skin>
@@ -36,7 +63,7 @@ and adding the following to your site.xml site descriptor for the maven-site-plu
   <custom>
     <!-- Custom properties controlling the commons-skin template. -->
     <commonsSkin>
-      <!-- 
+      <!--
         Convert preformatted source section tags to prettyprint:
           <div class="source"><pre> to <div class="source"><pre class="prettyprint">
       -->
