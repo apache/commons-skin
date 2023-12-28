@@ -41,6 +41,7 @@
     <!-- To use the commons-release plugin -->
     <commons.componentid>skin</commons.componentid>
     <commons.release.isDistModule>true</commons.release.isDistModule>
+    <commons.release.version>4.3</commons.release.version>
     <commons.bc.version>4.3</commons.bc.version>
     <commons.rc.version>RC1</commons.rc.version>
     <!-- No svn staging -->
