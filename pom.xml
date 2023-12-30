@@ -46,10 +46,11 @@
     <!-- No svn staging -->
     <commons.distSvnStagingUrl></commons.distSvnStagingUrl>
     <moditect.skip>true</moditect.skip>
+    <project.build.outputTimestamp>2024-01-01T00:00:00Z</project.build.outputTimestamp>
   </properties>
 
   <build>
-    <defaultGoal>clean verify</defaultGoal>
+    <defaultGoal>clean artifact:check-buildplan verify</defaultGoal>
     <resources>
       <resource>
         <directory>${basedir}/src/main/resources</directory>
