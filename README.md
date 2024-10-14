@@ -44,7 +44,7 @@ Apache Commons Skin
 ===================
 
 [![Java CI](https://github.com/apache/commons-skin/actions/workflows/maven.yml/badge.svg)](https://github.com/apache/commons-skin/actions/workflows/maven.yml)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.commons/commons-skin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.apache.commons/commons-skin/)
+[![Maven Central](https://img.shields.io/maven-central/v/org.apache.commons/commons-skin?label=Maven%20Central)](https://search.maven.org/artifact/org.apache.commons/commons-skin)
 
 Apache Commons Skin
 
