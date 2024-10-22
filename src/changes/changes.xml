@@ -61,9 +61,9 @@ The <action> type attribute can be add,update,fix,remove.
         <!-- FIX -->
         <action type="fix" dev="ggregory" due-to="step-security-bot, Gary Gregory">[StepSecurity] ci: Harden GitHub Actions #66.</action>
         <!-- UPDATE -->
+        <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump org.apache.commons:commons-parent from 49 to 78 #114, #121, #132, #140, #152, #154, #159, #162, #169, #171.</action>
         <action type="update" dev="chtompki" due-to="Rob Tompkins">Main logo upgrade - commons-logo.png</action>
         <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump GitHub CI actions.</action>
-        <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump org.apache.commons:commons-parent from 49 to 78 #114, #121, #132, #140, #152, #154, #159, #162, #169, #171.</action>
       </release>
       <release version="4.2" date="2019-11-25" description="New features and bug fixes for maven-site-plugin 3.5+. 
 The previous version velocity template had features written for an earlier site 
