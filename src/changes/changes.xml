@@ -57,7 +57,7 @@ The <action> type attribute can be add,update,fix,remove.
     The changes report outputs actions in the order they appear in this file.
      -->
     <body>
-      <release version="4.3" date="TBD" description="New features and bug fixes.">
+      <release version="5.0.0" date="YYY-MM-DD" description="New features and bug fixes.">
         <!-- FIX -->
         <action type="fix" dev="ggregory" due-to="step-security-bot, Gary Gregory">[StepSecurity] ci: Harden GitHub Actions #66.</action>
         <!-- UPDATE -->
