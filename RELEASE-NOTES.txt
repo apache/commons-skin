@@ -1,3 +1,46 @@
+              Apache Commons Skin 5.0.0
+                  RELEASE NOTES
+
+The Apache Commons Skin team is pleased to announce the release of Apache Commons Skin 5.0.0.
+
+New features and bug fixes.
+
+Changes in this version include:
+
+
+Fixed Bugs:
+o   [StepSecurity] ci: Harden GitHub Actions #66. Thanks to step-security-bot, Gary Gregory. 
+
+Changes:
+o   Bump org.apache.commons:commons-parent from 49 to 78 #114, #121, #132, #140, #152, #154, #159, #162, #169, #171. Thanks to Gary Gregory, Dependabot. 
+o   Main logo upgrade - commons-logo.png Thanks to Rob Tompkins. 
+o   Bump GitHub CI actions. Thanks to Gary Gregory, Dependabot. 
+o   Migrate skin to Doxia 2.x #179. Thanks to Slawomir Jaranowski, Michael Osipov, Gary Gregory. 
+
+
+
+You can test Apache Commons Skin by installing the skin using 'mvn install' 
+and adding the following to your site.xml site descriptor for the maven-site-plugin:
+
+  <skin>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-skin</artifactId>
+    <version>5.0.0</version>
+  </skin>
+
+  <custom>
+    <!-- Custom properties controlling the commons-skin template. -->
+    <commonsSkin>
+      <!-- 
+        Convert preformatted source section tags to prettyprint:
+          <div class="source"><pre> to <div class="source"><pre class="prettyprint">
+      -->
+      <prettyPrintSourcePreTags>true</prettyPrintSourcePreTags>
+
+      <!-- Add the "linenums" class to the prettyprint enabled source tags -->
+      <prettyPrintLineNumbersEnabled>false</prettyPrintLineNumbersEnabled>
+    </commonsSkin>
+  </custom>
               Apache Commons Skin 4.2
                   RELEASE NOTES
 
