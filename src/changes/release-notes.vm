@@ -153,3 +153,5 @@ and adding the following to your site.xml site descriptor for the maven-site-plu
       <prettyPrintLineNumbersEnabled>false</prettyPrintLineNumbersEnabled>
     </commonsSkin>
   </custom>
+
+-----------------------------------------------------------------------------
