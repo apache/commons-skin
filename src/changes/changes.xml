@@ -57,15 +57,19 @@ The <action> type attribute can be add,update,fix,remove.
     The changes report outputs actions in the order they appear in this file.
      -->
     <body>
-      <release version="5.0.0" date="2024-12-25" description="New features and bug fixes.">
-        <!-- FIX -->
-        <action type="fix" dev="ggregory" due-to="step-security-bot, Gary Gregory">[StepSecurity] ci: Harden GitHub Actions #66.</action>
-        <!-- UPDATE -->
-        <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump org.apache.commons:commons-parent from 49 to 78 #114, #121, #132, #140, #152, #154, #159, #162, #169, #171.</action>
-        <action type="update" dev="chtompki" due-to="Rob Tompkins">Main logo upgrade - commons-logo.png</action>
-        <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump GitHub CI actions.</action>
-        <action type="update" dev="ggregory" due-to="Slawomir Jaranowski, Michael Osipov, Gary Gregory">Migrate skin to Doxia 2.x #179.</action>
-      </release>
+        <release version="5.0.1" date="YYY-MM-DD" description="New features and bug fixes.">
+          <!-- FIX -->
+          <!-- UPDATE -->
+        </release>
+        <release version="5.0.0" date="2024-12-25" description="New features and bug fixes.">
+          <!-- FIX -->
+          <action type="fix" dev="ggregory" due-to="step-security-bot, Gary Gregory">[StepSecurity] ci: Harden GitHub Actions #66.</action>
+          <!-- UPDATE -->
+          <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump org.apache.commons:commons-parent from 49 to 78 #114, #121, #132, #140, #152, #154, #159, #162, #169, #171.</action>
+          <action type="update" dev="chtompki" due-to="Rob Tompkins">Main logo upgrade - commons-logo.png</action>
+          <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump GitHub CI actions.</action>
+          <action type="update" dev="ggregory" due-to="Slawomir Jaranowski, Michael Osipov, Gary Gregory">Migrate skin to Doxia 2.x #179.</action>
+        </release>
       <release version="4.2" date="2019-11-25" description="New features and bug fixes for maven-site-plugin 3.5+. 
 The previous version velocity template had features written for an earlier site 
 plugin version that were broken with the latest site plugin.">
