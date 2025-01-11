@@ -50,6 +50,7 @@
     <!-- No svn staging -->
     <commons.distSvnStagingUrl></commons.distSvnStagingUrl>
     <moditect.skip>true</moditect.skip>
+    <!-- project.build.outputTimestamp is managed by Maven plugins, see https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
     <project.build.outputTimestamp>2024-12-28T19:53:39Z</project.build.outputTimestamp>
   </properties>
 
