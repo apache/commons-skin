@@ -29,6 +29,18 @@
   <name>Apache Commons Skin</name>
   <description>Apache Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
+  <url>https://commons.apache.org/proper/commons-skin/</url>
+  <ciManagement>
+    <system>GitHub</system>
+    <url>https://github.com/apache/commons-skin/actions</url>
+  </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>apache.website</id>
+      <name>Apache Commons Site</name>
+      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-skin/</url>
+    </site>
+  </distributionManagement>
   <scm>
     <connection>scm:git:https://gitbox.apache.org/repos/asf/commons-skin</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/commons-skin</developerConnection>
