@@ -29,13 +29,11 @@
   <name>Apache Commons Skin</name>
   <description>Apache Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
-
   <scm>
     <connection>scm:git:https://gitbox.apache.org/repos/asf/commons-skin</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/commons-skin</developerConnection>
     <url>https://gitbox.apache.org/repos/asf/commons-skin</url>
   </scm>
-
   <properties>
     <animal.sniffer.skip>true</animal.sniffer.skip>
     <!-- To use the commons-release plugin -->
@@ -53,7 +51,6 @@
     <!-- project.build.outputTimestamp is managed by Maven plugins, see https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
     <project.build.outputTimestamp>2024-12-28T19:53:39Z</project.build.outputTimestamp>
   </properties>
-
   <build>
     <defaultGoal>clean artifact:check-buildplan verify</defaultGoal>
     <resources>
@@ -61,7 +58,6 @@
         <directory>${basedir}/src/main/resources</directory>
       </resource>
     </resources>
-
     <plugins>
       <!-- Configure assembly plugin so that mvn deploy works -->
       <plugin>
@@ -85,6 +81,5 @@
         </configuration>
       </plugin>
     </plugins>
-
   </build>
 </project>
