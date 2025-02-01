@@ -51,8 +51,8 @@ Apache Commons Skin
 Documentation
 -------------
 
-More information can be found on the [Apache Commons Skin homepage](https://commons.apache.org/proper/commons-skin).
-The [Javadoc](https://commons.apache.org/proper/commons-skin/apidocs) can be browsed.
+More information can be found on the [Apache Commons Skin homepage](https://poi.apache.org/index.html).
+The [Javadoc](https://poi.apache.org/apidocs/index.html) can be browsed.
 Questions related to the usage of Apache Commons Skin should be posted to the [user mailing list](https://commons.apache.org/mail-lists.html).
 
 Getting the latest release
