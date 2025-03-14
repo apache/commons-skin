@@ -20,7 +20,7 @@
 
 The ${developmentTeam} is pleased to announce the release of ${project.name} ${version}.
 
-## N.B. the available variables are described here:
+## The available variables are described here:
 ## http://maven.apache.org/plugins/maven-changes-plugin/examples/using-a-custom-announcement-template.html
 ##
 ## Hack to improve layout: replace all pairs of spaces with a single new-line
