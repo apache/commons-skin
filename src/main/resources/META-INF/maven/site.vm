@@ -575,7 +575,7 @@
 
     <div class="footer">
       <p>Copyright &copy;#copyright()All Rights Reserved.</p>
-      #if ( $site.getCustomChildd("footer") )
+      #if ( $site.getCustomChild("footer") )
         ## Remove extraneous header from custom entries
         ## See DOXIA-150
         #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
