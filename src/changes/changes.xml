@@ -58,12 +58,13 @@ The <action> type attribute can be add,update,fix,remove.
     The changes report outputs actions in the order they appear in this file.
      -->
     <body>
-        <release version="5.0.1" date="YYY-MM-DD" description="New features and bug fixes.">
+        <release version="5.1.0" date="YYYY-MM-DD" description="New features and bug fixes.">
           <!-- FIX -->
           <action type="fix" dev="sebb">Fix typo in site.vm</action>
           <action type="fix" dev="ggregory" due-to="Gary Gregory">Remove -nouses directive from maven-bundle-plugin. OSGi package imports now state 'uses' definitions for package imports, this doesn't affect JPMS (from org.apache.commons:commons-parent:80).</action>
           <!-- UPDATE -->
           <action type="update" dev="ggregory" due-to="Dependabot, Gary Gregory">Bump commons-parent from 79 to 87 #211, #232.</action>
+          <action type="update" dev="ggregory" due-to="Gary Gregory">Use the new oak leaf logo, needs a new commons-parent even for this component.</action>
         </release>
         <release version="5.0.0" date="2024-12-25" description="New features and bug fixes.">
           <!-- FIX -->
