@@ -1,3 +1,48 @@
+Apache Commons Skin 5.1.0 Release Notes
+---------------------------------------
+
+The Apache Commons Skin team is pleased to announce the release of Apache Commons Skin 5.1.0.
+
+New features and bug fixes.
+
+Changes in this version include:
+
+
+Fixed Bugs:
+o   Fix typo in site.vm 
+o   Remove -nouses directive from maven-bundle-plugin. OSGi package imports now state 'uses' definitions for package imports, this doesn't affect JPMS (from org.apache.commons:commons-parent:80). Thanks to Gary Gregory. 
+
+Changes:
+o   Bump commons-parent from 79 to 87 #211, #232. Thanks to Dependabot, Gary Gregory. 
+o   Use the new oak leaf logo, needs a new commons-parent even for this component. Thanks to Gary Gregory. 
+
+
+
+You can test Apache Commons Skin by installing the skin using 'mvn install' 
+and adding the following to your site.xml site descriptor for the maven-site-plugin:
+
+  <skin>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-skin</artifactId>
+    <version>5.1.0</version>
+  </skin>
+
+  <custom>
+    <!-- Custom properties controlling the commons-skin template. -->
+    <commonsSkin>
+      <!-- 
+        Convert preformatted source section tags to prettyprint:
+          <div class="source"><pre> to <div class="source"><pre class="prettyprint">
+      -->
+      <prettyPrintSourcePreTags>true</prettyPrintSourcePreTags>
+
+      <!-- Add the "linenums" class to the prettyprint enabled source tags -->
+      <prettyPrintLineNumbersEnabled>false</prettyPrintLineNumbersEnabled>
+    </commonsSkin>
+  </custom>
+
+-----------------------------------------------------------------------------
+
               Apache Commons Skin 5.0.0
                   RELEASE NOTES
 
