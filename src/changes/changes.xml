@@ -57,44 +57,39 @@ The <action> type attribute can be add,update,fix,remove.
     The release notes template groups actions by type, and only extracts data for the current release.
     The changes report outputs actions in the order they appear in this file.
      -->
-    <body>
-        <release version="5.1.0" date="2025-09-13" description="New features and bug fixes.">
-          <!-- FIX -->
-          <action type="fix" dev="sebb">Fix typo in site.vm</action>
-          <action type="fix" dev="ggregory" due-to="Gary Gregory">Remove -nouses directive from maven-bundle-plugin. OSGi package imports now state 'uses' definitions for package imports, this doesn't affect JPMS (from org.apache.commons:commons-parent:80).</action>
-          <!-- UPDATE -->
-          <action type="update" dev="ggregory" due-to="Dependabot, Gary Gregory">Bump commons-parent from 79 to 87 #211, #232.</action>
-          <action type="update" dev="ggregory" due-to="Gary Gregory">Use the new oak leaf logo, needs a new commons-parent even for this component.</action>
-        </release>
-        <release version="5.0.0" date="2024-12-25" description="New features and bug fixes.">
-          <!-- FIX -->
-          <action type="fix" dev="ggregory" due-to="step-security-bot, Gary Gregory">[StepSecurity] ci: Harden GitHub Actions #66.</action>
-          <!-- UPDATE -->
-          <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump org.apache.commons:commons-parent from 49 to 78 #114, #121, #132, #140, #152, #154, #159, #162, #169, #171.</action>
-          <action type="update" dev="chtompki" due-to="Rob Tompkins">Main logo upgrade - commons-logo.png</action>
-          <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump GitHub CI actions.</action>
-          <action type="update" dev="ggregory" due-to="Slawomir Jaranowski, Michael Osipov, Gary Gregory">Migrate skin to Doxia 2.x #179.</action>
-        </release>
-      <release version="4.2" date="2019-11-25" description="New features and bug fixes for maven-site-plugin 3.5+. 
+  <body>
+    <release version="" date="YYYY-MM-DD" description="This is a feature and maintenance release. Java 8 or later is required.">
+      <!-- FIX -->
+      <!-- ADD -->
+      <!-- UPDATE -->
+    </release>
+    <release version="5.1.0" date="2025-09-13" description="New features and bug fixes.">
+      <!-- FIX -->
+      <action type="fix" dev="sebb">Fix typo in site.vm</action>
+      <action type="fix" dev="ggregory" due-to="Gary Gregory">Remove -nouses directive from maven-bundle-plugin. OSGi package imports now state 'uses' definitions for package imports, this doesn't affect JPMS (from org.apache.commons:commons-parent:80).</action>
+      <!-- UPDATE -->
+      <action type="update" dev="ggregory" due-to="Dependabot, Gary Gregory">Bump commons-parent from 79 to 87 #211, #232.</action>
+      <action type="update" dev="ggregory" due-to="Gary Gregory">Use the new oak leaf logo, needs a new commons-parent even for this component.</action>
+    </release>
+    <release version="5.0.0" date="2024-12-25" description="New features and bug fixes.">
+      <!-- FIX -->
+      <action type="fix" dev="ggregory" due-to="step-security-bot, Gary Gregory">[StepSecurity] ci: Harden GitHub Actions #66.</action>
+      <!-- UPDATE -->
+      <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump org.apache.commons:commons-parent from 49 to 78 #114, #121, #132, #140, #152, #154, #159, #162, #169, #171.</action>
+      <action type="update" dev="chtompki" due-to="Rob Tompkins">Main logo upgrade - commons-logo.png</action>
+      <action type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump GitHub CI actions.</action>
+      <action type="update" dev="ggregory" due-to="Slawomir Jaranowski, Michael Osipov, Gary Gregory">Migrate skin to Doxia 2.x #179.</action>
+    </release>
+    <release version="4.2" date="2019-11-25" description="New features and bug fixes for maven-site-plugin 3.5+. 
 The previous version velocity template had features written for an earlier site 
 plugin version that were broken with the latest site plugin.">
-        <action type="remove" dev="aherbert">
-          Remove unused css files. These are not used in the current skin and
-    are from previous skin versions.
-        </action>
-        <action type="fix" dev="aherbert">
-          Fix processing of custom &lt;footer&gt; element from commons-parent site.xml.
-        </action>
-        <action type="fix" dev="aherbert">
-          Update processing of &lt;head&gt; section to handle injected XHTML.
-        </action>
-        <action type="add" dev="aherbert">
-          Optionally render bare &lt;div class="source"&gt;&lt;pre&gt; tags using prettyprint.
-    The functionality is enabled using custom properties to be added to the site.xml.
-        </action>
-        <action type="fix" dev="aherbert">
-          Fixed background on navigation menu collapsed icon from white to transparent.
-        </action>
-      </release>
-    </body>
+      <action type="remove" dev="aherbert">Remove unused css files. These are not used in the current skin and are from previous skin versions.</action>
+      <action type="fix" dev="aherbert">Fix processing of custom &lt;footer&gt; element from commons-parent site.xml.</action>
+      <action type="fix" dev="aherbert">Update processing of &lt;head&gt; section to handle injected XHTML.</action>
+      <action type="add" dev="aherbert">Optionally render bare &lt;div class="source"&gt;&lt;pre&gt; tags using prettyprint.
+        The functionality is enabled using custom properties to be added to the site.xml.
+      </action>
+      <action type="fix" dev="aherbert">Fixed background on navigation menu collapsed icon from white to transparent.</action>
+    </release>
+  </body>
 </document>
