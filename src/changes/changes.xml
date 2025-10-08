@@ -62,7 +62,7 @@ The <action> type attribute can be add,update,fix,remove.
       <!-- FIX -->
       <!-- ADD -->
       <!-- UPDATE -->
-      <action type="update" dev="ggregory" due-to="Gary Gregory">Bump commons-parent from 87 to 88.</action>
+      <action type="update" dev="ggregory" due-to="Gary Gregory">Bump commons-parent from 87 to 89.</action>
     </release>
     <release version="5.1.0" date="2025-09-13" description="New features and bug fixes.">
       <!-- FIX -->
