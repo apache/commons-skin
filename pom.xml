@@ -25,7 +25,7 @@
     <version>89</version>
   </parent>
   <artifactId>commons-skin</artifactId>
-  <version>5.1.1-SNAPSHOT</version>
+  <version>5.2.0-SNAPSHOT</version>
   <name>Apache Commons Skin</name>
   <description>Apache Commons Skin</description>
   <inceptionYear>2006</inceptionYear>
@@ -52,8 +52,8 @@
     <commons.componentid>skin</commons.componentid>
     <commons.packageId>skin</commons.packageId>
     <commons.release.isDistModule>true</commons.release.isDistModule>
-    <commons.release.version>5.1.1</commons.release.version>
-    <commons.release.next>5.1.2</commons.release.next>
+    <commons.release.version>5.2.0</commons.release.version>
+    <commons.release.next>5.2.1</commons.release.next>
     <commons.bc.version>5.1.0</commons.bc.version>
     <commons.rc.version>RC1</commons.rc.version>
     <commons.jira.id>COMMONSSITE</commons.jira.id>
