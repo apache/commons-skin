@@ -1,3 +1,45 @@
+Apache Commons Skin 5.2.0 Release Notes
+------------------------------------------------
+
+The Apache Commons Skin team is pleased to announce the release of Apache Commons Skin 5.2.0.
+
+This is a feature and maintenance release. Java 8 or later is required.
+
+Changes in this version include:
+
+
+Fixed Bugs:
+o   The Project logotype must use the word "Apache", not "The ASF". Thanks to Gary Gregory. 
+
+Changes:
+o   Bump commons-parent from 87 to 89. Thanks to Gary Gregory. 
+
+
+
+You can test Apache Commons Skin by installing the skin using 'mvn install' 
+and adding the following to your site.xml site descriptor for the maven-site-plugin:
+
+  <skin>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-skin</artifactId>
+    <version>5.2.0</version>
+  </skin>
+
+  <custom>
+    <!-- Custom properties controlling the commons-skin template. -->
+    <commonsSkin>
+      <!-- 
+        Convert preformatted source section tags to prettyprint:
+          <div class="source"><pre> to <div class="source"><pre class="prettyprint">
+      -->
+      <prettyPrintSourcePreTags>true</prettyPrintSourcePreTags>
+
+      <!-- Add the "linenums" class to the prettyprint enabled source tags -->
+      <prettyPrintLineNumbersEnabled>false</prettyPrintLineNumbersEnabled>
+    </commonsSkin>
+  </custom>
+
+-----------------------------------------------------------------------------
 Apache Commons Skin 5.1.0 Release Notes
 ---------------------------------------
 
