@@ -1,5 +1,5 @@
 Apache Commons Skin 5.2.0 Release Notes
-------------------------------------------------
+---------------------------------------
 
 The Apache Commons Skin team is pleased to announce the release of Apache Commons Skin 5.2.0.
 
@@ -13,7 +13,6 @@ o   The Project logotype must use the word "Apache", not "The ASF". Thanks to Ga
 
 Changes:
 o   Bump commons-parent from 87 to 89. Thanks to Gary Gregory. 
-
 
 
 You can test Apache Commons Skin by installing the skin using 'mvn install' 
