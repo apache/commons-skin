@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-parent</artifactId>
-    <version>89</version>
+    <version>90</version>
   </parent>
   <artifactId>commons-skin</artifactId>
   <version>5.2.1-SNAPSHOT</version>
