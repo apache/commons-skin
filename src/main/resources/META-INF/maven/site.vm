@@ -384,7 +384,7 @@
         #set ( $href = $PathTool.calculateLink( $item.href, $relativePath ) )
         #set ( $href = $href.replaceAll( '\\', '/' ) )
       #else
-        #set ( $href="http://maven.apache.org/" )
+        #set ( $href="https://maven.apache.org/" )
       #end
 ##
       #if( $item.name )
@@ -435,12 +435,12 @@
       </a>
     #end
     #if( $poweredBy.isEmpty() )
-      <a href="http://maven.apache.org/" title="$text.get( "template.builtby" ) Maven" class="poweredBy">
+      <a href="https://maven.apache.org/" title="$text.get( "template.builtby" ) Maven" class="poweredBy">
         <img class="builtBy" alt="$text.get( "template.builtby" ) Maven" src="$relativePath/images/logos/maven-feather.png" />
       </a>
     #end
   #else
-    <a href="http://maven.apache.org/" title="$text.get( "template.builtby" ) Maven" class="poweredBy">
+    <a href="https://maven.apache.org/" title="$text.get( "template.builtby" ) Maven" class="poweredBy">
       <img class="builtBy" alt="$text.get( "template.builtby" ) Maven" src="$relativePath/images/logos/maven-feather.png" />
     </a>
   #end
@@ -475,7 +475,7 @@
       #set ( $ribbonColor = $definedRibbonColor.getValue().toLowerCase() )
     #end
 
-    <a href="http://github.com/$gitHubProjectId">
+    <a href="https://github.com/$gitHubProjectId">
       <img style="position: absolute; top: 0; $ribbonOrientation: 0; border: 0; z-index: 10000;"
         src="https://s3.amazonaws.com/github/ribbons/$ribbon.get( $ribbonColor )"
         alt="Fork me on GitHub">
