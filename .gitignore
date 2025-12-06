@@ -4,3 +4,7 @@
 target
 .idea
 **/.DS_Store
+
+# NetBeans files
+nb-configuration.xml
+nbactions.xml
